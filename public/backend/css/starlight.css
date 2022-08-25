@@ -12114,10 +12114,10 @@ textarea.parsley-success:focus {
   color: #495057;
 }
 .sl-menu-link.active {
-  background-color: #5B93D3;
-  border-color: #5B93D3;
-  color: #fff;
-}
+    background-color: #df5a01;
+    border-color: #df5a01;
+    color: #fff;
+  }
 .sl-menu-link.active + .sl-menu-link {
   border-color: transparent;
 }

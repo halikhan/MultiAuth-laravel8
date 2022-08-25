@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\Category\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +16,26 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::prefix('admin')->group(function(){
+
+    Route::get('/', [AdminController::class,'index']);
     Route::get('/login', [AdminController::class,'index'])->name('admin_login_form');
     Route::get('/register', [AdminController::class,'adminregister'])->name('admin.register');
     Route::post('/registerstore', [AdminController::class,'registerstore'])->name('admin.registerstore');
     Route::post('/login-owner', [AdminController::class,'login'])->name('admin.login');
     Route::get('/logout', [AdminController::class,'Adminlogout'])->name('admin.logout')->middleware('admin');
     Route::get('/dashboard', [AdminController::class,'dashboard'])->name('admin_dashboard')->middleware('admin');
+    Route::get('categories', [CategoryController::class,'category'])->name('categories');
+
+
 });
 
 
+
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
 
 Route::get('/dashboard', function () {

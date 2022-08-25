@@ -45,7 +45,7 @@
 
     <!-- ########## START: LEFT PANEL ########## -->
 
-    @yield('admin')
+    @yield('admin_content')
     <!-- ########## END: MAIN PANEL ###### #### -->
 
     <script src="{{ asset('public/backend/lib/jquery/jquery.js') }} "></script>
