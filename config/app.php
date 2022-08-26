@@ -52,8 +52,8 @@ return [
     |
     */
 
-        'url' => env('APP_URL', 'http://localhost/MultiAuth-laravel_8'),
-    'asset_url' => env('APP_URL', 'http://localhost/MultiAuth-laravel_8/piblic'),
+        'url' => env('APP_URL', 'http://localhost/e-commerce'),
+    'asset_url' => env('APP_URL', 'http://localhost/e-commerce/piblic'),
 
 
     // 'url' => env('APP_URL', 'http://localhost'),

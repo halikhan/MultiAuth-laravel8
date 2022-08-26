@@ -1,3 +1,8 @@
+<?php
+$logo_add = App\Models\Admin\LogoManager::where('type','2')->first();
+
+// dd($logo_add->logo_image);
+?>
 <footer class="footer">
     <div class="container">
         <div class="row">
@@ -5,7 +10,7 @@
             <div class="col-lg-3 footer_col">
                 <div class="footer_column footer_contact">
                     <div class="logo_container">
-                        <div class="logo"><a href="{{ url('/') }}">OneTech</a></div>
+                        <div class="logo"><a href="{{ url('/') }}"><img src="{{ URL::to($logo_add->logo_image ??'') }}" height="200px;" width="200px;"></a></div>
                     </div>
                     <div class="footer_title">Got Question? Call Us 24/7</div>
                     <div class="footer_phone">+38 068 005 3570</div>

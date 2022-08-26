@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryControllersTable extends Migration
+class CreateLogoManagersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateCategoryControllersTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_controllers', function (Blueprint $table) {
+        Schema::create('logo_managers', function (Blueprint $table) {
             $table->id();
+            $table->integer('type');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateCategoryControllersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_controllers');
+        Schema::dropIfExists('logo_managers');
     }
 }

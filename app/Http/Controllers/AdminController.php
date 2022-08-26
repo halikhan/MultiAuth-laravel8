@@ -39,12 +39,19 @@ class AdminController extends Controller
             'password'=>$checkAuth['password'],
         ])){
             // dd($request->all());
-
-            return redirect()->route('admin_dashboard')->with('message','admin login successfully!');
+            $notification = array(
+                'messege' => 'You hav login Successfully!',
+                'alert-type' => 'success'
+            );
+            return Redirect()->route('admin_dashboard')->with($notification);
+            // return redirect()->route('admin_dashboard')->with('message','admin login successfully!');
         }else{
             // dd($request->all());
-            return back()->with('error','Invalid email or password!');
-
+            $notification = array(
+                'messege' => 'Invalid email or password!',
+                'alert-type' => 'error'
+            );
+            return back()->with($notification);
         }
     }
 
